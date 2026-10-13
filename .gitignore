@@ -20,6 +20,10 @@
 # production
 /build
 
+# Original photo archives stay local; the storefront uses optimized files in public/
+/Desfile-Basura/
+/bassssura/
+
 # misc
 .DS_Store
 *.pem
@@ -32,6 +36,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
