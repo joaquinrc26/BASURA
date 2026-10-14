@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Rubik_Dirt, Special_Elite } from "next/font/google";
+import { Archivo, Permanent_Marker, Special_Elite } from "next/font/google";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { CartProvider } from "@/components/cart-provider";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/site-header";
 import { getInstagramUrl } from "@/lib/social";
 import "./globals.css";
 
-const display = Rubik_Dirt({ weight: "400", subsets: ["latin"], variable: "--font-display", display: "swap" });
+const display = Permanent_Marker({ weight: "400", subsets: ["latin"], variable: "--font-display", display: "swap" });
 const mono = Special_Elite({ weight: "400", subsets: ["latin"], variable: "--font-mono", display: "swap" });
 const body = Archivo({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
