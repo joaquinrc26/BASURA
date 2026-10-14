@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Permanent_Marker, Special_Elite } from "next/font/google";
+import { Archivo, Permanent_Marker, Rubik_Dirt, Special_Elite } from "next/font/google";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { CartProvider } from "@/components/cart-provider";
@@ -9,6 +9,7 @@ import { getInstagramUrl } from "@/lib/social";
 import "./globals.css";
 
 const display = Permanent_Marker({ weight: "400", subsets: ["latin"], variable: "--font-display", display: "swap" });
+const titleFont = Rubik_Dirt({ weight: "400", subsets: ["latin"], variable: "--font-title", display: "swap" });
 const mono = Special_Elite({ weight: "400", subsets: ["latin"], variable: "--font-mono", display: "swap" });
 const body = Archivo({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   const instagramUrl = getInstagramUrl();
   return (
-    <html lang="es-AR" className={`${display.variable} ${mono.variable} ${body.variable}`}>
+    <html lang="es-AR" className={`${display.variable} ${titleFont.variable} ${mono.variable} ${body.variable}`}>
       <body>
         <CartProvider>
           <SiteHeader />
