@@ -80,7 +80,6 @@ No antepongas `NEXT_PUBLIC_` a credenciales, URLs de base de datos ni secretos.
 4. Las migraciones de `prisma/migrations/` son versionadas y aditivas para la primera instalación. No se ejecuta `migrate reset` ni se borran datos.
 5. Ejecutá `npm run db:generate` para regenerar el cliente después de cambios al esquema.
 6. La migración `20261013180000_site_content` agrega los textos editables del sitio; aplicala antes de desplegar esta versión.
-6. La migración `20261013145000_site_content` agrega los textos editables del sitio; aplicala antes de desplegar esta versión.
 
 El proyecto no conecta ni migra una base remota hasta que se configuren las variables.
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Archivo, Permanent_Marker, Special_Elite } from "next/font/google";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { CartProvider } from "@/components/cart-provider";
@@ -6,6 +7,10 @@ import { FloatingSocialLinks } from "@/components/floating-social-links";
 import { SiteHeader } from "@/components/site-header";
 import { getInstagramUrl } from "@/lib/social";
 import "./globals.css";
+
+const display = Permanent_Marker({ weight: "400", subsets: ["latin"], variable: "--font-display", display: "swap" });
+const mono = Special_Elite({ weight: "400", subsets: ["latin"], variable: "--font-mono", display: "swap" });
+const body = Archivo({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -29,7 +34,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   const instagramUrl = getInstagramUrl();
   return (
-    <html lang="es-AR">
+    <html lang="es-AR" className={`${display.variable} ${mono.variable} ${body.variable}`}>
       <body>
         <CartProvider>
           <SiteHeader />
