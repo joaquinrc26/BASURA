@@ -261,7 +261,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .sports-content h2, .manifesto-close h2, .footer-mark, .page-intro h1, .product-info h1,
 .editorial-lead, .editorial-poster strong, .manifesto-mark, .admin-content-group summary,
 .not-found h1 { letter-spacing: .01em; font-weight: 400; }
-.hero-wordmark { line-height: .9; text-shadow: 4px 4px 0 var(--acid), 8px 8px 0 var(--teal); }
+.hero-wordmark { font-size: clamp(64px, 17vw, 250px); line-height: 1.05; white-space: nowrap; padding-right: .12em; text-shadow: 4px 4px 0 var(--acid), 8px 8px 0 var(--teal); }
+@media (max-width: 800px) { .hero-wordmark { font-size: clamp(56px, 17vw, 140px); } }
 .hero-scribble { background: var(--teal); border: 2px solid var(--ink); }
 .issue-stamp { background: var(--acid); }
 .product-image-wrap, .gallery-main, .cart-thumb, .image-placeholder { background-color: #e9e9e9; }
